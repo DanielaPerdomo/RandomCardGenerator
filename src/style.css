@@ -1,1 +1,51 @@
-@import "~bootstrap/dist/css/bootstrap.min.css";
+body {
+  background-color: green;
+  box-sizing: border-box;
+}
+.card {
+  text-align: center;
+  background-color: white;
+  margin: auto;
+  padding: 20px;
+  padding-top: 180px;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 80px;
+  height: 200px;
+  width: 250px;
+  position: relative;
+  &:before {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 80px;
+  }
+  &:after {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 80px;
+  }
+  &.diamante:before,
+  &.diamante:after {
+    content: "\2666";
+    color: red;
+  }
+  &.corazon:before,
+  &.corazon:after {
+    content: "\2665";
+    color: red;
+  }
+  &.trebol:before,
+  &.trebol:after {
+    content: "\2663";
+  }
+  &.picas:before,
+  &.picas:after {
+    content: "\2660";
+  }
+}
+.newcard {
+  display: flex;
+  justify-content: center;
+}
